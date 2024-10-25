@@ -11,6 +11,7 @@ public class HomeController {
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("home/index");
+		mv.addObject("a", "Controller ok!");
 		return mv;
 	}
 }
