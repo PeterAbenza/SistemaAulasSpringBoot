@@ -11,45 +11,68 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body>
+<body style="background-image: url('img/fundoMain.jpg');">
 
-	<header>
+	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
 
-		<nav class="navbar navbar-expand-lg navbar-dark"
-			style="background: #DCDCDC;">
-			<a class="navbar-brand" href="#"> <img alt="Logo"
-				src="img/Logo_Strong.webp" width="130" height="90">
-			</a>
-
-			<div id="navMobile"
-				class="navbar-collapse collapse justify-content-end">
-
-				<a class="nav-item nav-link">Home</a> <a class="nav-item nav-link">Cadastrar
-					Aluno</a> <a class="nav-item nav-link">Pesquisar Aluno</a> <a
-					class="nav-item nav-link btn-danger">Sair</a>
-
-			</div>
-		</nav>
-		<div class="aviso">
-			<span>Descubra o melhor lugar para transformar o seu corpo e
-				mente! Nossa academia é mais do que apenas um espaço para treinar é
-				um ambiente dedicado ao seu bem-estar e progresso pessoal.</span>
+	<section class="container mt-5">
+		<div class="text-center">
+			<h1
+				style="font-family: serif; color: #DCDCDC; text-shadow: 2px 1px 0px black;">Bem-vindo
+				à StrongPeople Academia</h1>
+			<p style="color: white; text-shadow: 2px 1px 0px black;">A
+				StrongPeople Academia é o melhor lugar para transformar seu corpo e
+				mente. Venha fazer parte da nossa comunidade e alcançar seus
+				objetivos de saúde e fitness!</p>
 		</div>
 
-	</header>
-
-	<section class="home-section">
-	
-	
-	
+		<div class="row mt-4">
+			<div class="col-md-4">
+				<div class="card"
+					style="background: #DCDCDC; border: 1px solid black">
+					<img src="img/InstalaçõesModernas.jpg" class="card-img-top"
+						alt="Instalações Modernas">
+					<div class="card-body">
+						<h5 class="card-title" style="color: #007BFF">Instalações
+							Modernas</h5>
+						<p class="card-text">Equipamentos de ponta e espaços
+							projetados para o seu conforto e eficiência no treino.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card"
+					style="background: #DCDCDC; border: 1px solid black">
+					<img src="img/AulasDiversificadas.jpg" class="card-img-top"
+						alt="Aulas Diversificadas">
+					<div class="card-body">
+						<h5 class="card-title" style="color: #007BFF">Aulas
+							Diversificadas</h5>
+						<p class="card-text">Oferecemos uma variedade de aulas,
+							incluindo yoga, musculação, crossfit e zumba.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card"
+					style="background: #DCDCDC; border: 1px solid black">
+					<img src="img/ComunidadeEngajada.png" class="card-img-top"
+						alt="Comunidade Engajada">
+					<div class="card-body">
+						<h5 class="card-title" style="color: #007BFF">Comunidade
+							Engajada</h5>
+						<p class="card-text">Junte-se a uma comunidade que valoriza a
+							saúde, o bem-estar e o apoio mútuo.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
-	<footer>
-		<div class="rodape">
-			<span>Todos os diretos reservados - 2024 &copy; Peter Abenza</span>
-		</div>
-	</footer>
+	<div th:replace="fragmentos/fragmentos :: rodape"></div>
 
 	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>

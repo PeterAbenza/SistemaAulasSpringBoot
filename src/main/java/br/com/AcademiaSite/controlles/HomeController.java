@@ -11,7 +11,20 @@ public class HomeController {
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("home/index");
-		mv.addObject("a", "Controller ok!");
+		return mv;
+	}
+	
+	@GetMapping("/cadastrarAluno")
+	public ModelAndView cadstrarAluno() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("cadastro/cadastro");
+		return mv;
+	}
+	
+	@GetMapping("/procurarAluno")
+	public ModelAndView procurarAluno() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("procurar/procurar");
 		return mv;
 	}
 }
