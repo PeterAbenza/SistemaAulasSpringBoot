@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@charset "UTF-8";
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +14,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
     color: #fff;
+    min-width: 300px;
 }
 
 nav {
@@ -22,7 +25,6 @@ nav {
 a {
     cursor: pointer;
     font-weight: bold;
-    color: white;
 }
 
 a.btn-nav:hover {
@@ -40,6 +42,9 @@ a.btn-nav:hover {
     background-color: #DCDCDC;
     text-align: center;
 }
+
+
+
 
 
 /* Responsividade */

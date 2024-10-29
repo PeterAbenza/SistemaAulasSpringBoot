@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login - Projeto Academia</title>
+<title>Projeto Academia - Inserir Dados</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/cursorNeon.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link
@@ -15,15 +16,51 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-
 	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
-	
-	
-	
+
+	<section class="container mt-5" style="min-height: 712px;">
+		<h2 style="margin-top: 150px;">Inserir Dados do Aluno</h2>
+		<form action="/InsertAlunos" method="POST" th:object="${aluno}">
+			<div class="mb-3">
+				<label for="nome" class="form-label">Nome</label> <input type="text"
+					class="form-control" id="nome" name="nome" th:field="*{nome}"
+					required>
+			</div>
+			<div class="mb-3">
+				<label for="email" class="form-label">Email</label> <input
+					type="email" class="form-control" id="email" name="email"
+					th:field="*{email}" required>
+			</div>
+			<div class="mb-3">
+				<label for="cpf" class="form-label">CPF</label> <input type="text"
+					class="form-control" id="cpf" name="cpf" th:field="*{cpf}" required
+					minlength="11" maxlength="11"
+					title="O CPF deve conter 11 números">
+			</div>
+			<div class="mb-3">
+				<label for="numero" class="form-label">Telefone</label> <input type="text"
+					class="form-control" id="Telefone" name="Telefone" th:field="*{numero}" required
+					minlength="9" maxlength="9"
+					title="O TELEFONE deve conter 9 números">
+			</div>
+			<div class="mb-3">
+				<select class="form-select" id="plano" name="plano"
+				th:field="*{plano}" required>
+				<option value="">Selecione um Plano</option>
+				<option
+					th:each="plano : ${T(br.com.AcademiaSite.Enums.Planos).values()}"
+					th:value="${plano}"
+					th:text="${#strings.capitalize(plano.name().toLowerCase())}"></option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary">SALVAR</button>
+		</form>
+	</section>
+
 	<div th:replace="fragmentos/fragmentos :: rodape"></div>
-	
+
 	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-
+	<script type="module" src="/js/cursorNeon.js"></script>
 </body>
 </html>

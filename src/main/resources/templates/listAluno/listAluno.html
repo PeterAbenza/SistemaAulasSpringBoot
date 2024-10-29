@@ -6,6 +6,7 @@
 <title>Login - Projeto Academia</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/cursorNeon.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link
@@ -17,13 +18,37 @@
 <body>
 
 	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
-	
-	
-	
+
+	<section class="container mt-5" style="min-height: 814px;">
+		<h3>Últimos alunos Adicionados</h3>
+		<hr style="background: white;">
+		<table class="table table-borderblack table-hover"
+			style="color: white;">
+
+			<thead>
+				<th scope="col">Id</th>
+				<th scope="col">Cpf</th>
+				<th scope="col">Email</th>
+				<th scope="col">Nome</th>
+				<th scope="col">Numero</th>
+
+			</thead>
+			<tbody>
+				<tr scope="row" th:each="aluno : ${alunosList}">
+					<td th:text="${aluno.id}"></td>
+					<td th:text="${aluno.cpf}"></td>
+					<td th:text="${aluno.email}"></td>
+					<td th:text="${aluno.nome}"></td>
+					<td th:text="${aluno.numero}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
 	<div th:replace="fragmentos/fragmentos :: rodape"></div>
-	
+
 	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-
+	<script type="module" src="/js/cursorNeon.js"></script>
 </body>
 </html>
