@@ -13,18 +13,4 @@ public class HomeController {
 		mv.setViewName("home/index");
 		return mv;
 	}
-	
-	@GetMapping("/cadastrarAluno")
-	public ModelAndView cadstrarAluno() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("cadastro/cadastro");
-		return mv;
-	}
-	
-	@GetMapping("/procurarAluno")
-	public ModelAndView procurarAluno() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("procurar/procurar");
-		return mv;
-	}
 }

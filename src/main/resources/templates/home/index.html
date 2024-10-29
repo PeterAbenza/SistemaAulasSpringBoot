@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login - Projeto Academia</title>
+<title>Projeto Academia</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/cursorNeon.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link
@@ -14,58 +15,59 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body style="background-image: url('img/fundoMain.jpg');">
-
+<body>
 	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
 
-	<section class="container mt-5">
-		<div class="text-center">
-			<h1
-				style="font-family: serif; color: #DCDCDC; text-shadow: 2px 1px 0px black;">Bem-vindo
-				à StrongPeople Academia</h1>
-			<p style="color: white; text-shadow: 2px 1px 0px black;">A
-				StrongPeople Academia é o melhor lugar para transformar seu corpo e
-				mente. Venha fazer parte da nossa comunidade e alcançar seus
-				objetivos de saúde e fitness!</p>
-		</div>
+	<div class="text-center">
+		<h1 style="font-family: inherit; color: #CCCCCC; margin-top: 100px;">Bem-vindo
+			à StrongPeople Academia</h1>
+		<p style="color: #E0E0E0; text-shadow: 2px 1px 0px black;">A
+			StrongPeople Academia é o melhor lugar para transformar seu corpo e
+			mente. Venha fazer parte da nossa comunidade e alcançar seus
+			objetivos de saúde e fitness!</p>
+	</div>
 
+	<section class="container mt-5" style="min-height: 634px;">
 		<div class="row mt-4">
 			<div class="col-md-4">
 				<div class="card"
-					style="background: #DCDCDC; border: 1px solid black">
-					<img src="img/InstalaçõesModernas.jpg" class="card-img-top"
+					style="background: #262626; border: 1px solid black; border-radius: 20px;">
+					<img src="/img/InstalacoeesModernas.jpg"
+						style="border-radius: 20px;" class="card-img-top"
 						alt="Instalações Modernas">
 					<div class="card-body">
 						<h5 class="card-title" style="color: #007BFF">Instalações
 							Modernas</h5>
-						<p class="card-text">Equipamentos de ponta e espaços
-							projetados para o seu conforto e eficiência no treino.</p>
+						<p class="card-text" style="color: white">Equipamentos de
+							ponta e espaços projetados para o seu conforto e eficiência no
+							treino.</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="card"
-					style="background: #DCDCDC; border: 1px solid black">
-					<img src="img/AulasDiversificadas.jpg" class="card-img-top"
+					style="background: #262626; border: 1px solid black; border-radius: 20px;">
+					<img src="/img/AulasDiversificadas.jpg"
+						style="border-radius: 20px;" class="card-img-top"
 						alt="Aulas Diversificadas">
 					<div class="card-body">
 						<h5 class="card-title" style="color: #007BFF">Aulas
 							Diversificadas</h5>
-						<p class="card-text">Oferecemos uma variedade de aulas,
-							incluindo yoga, musculação, crossfit e zumba.</p>
+						<p class="card-text" style="color: white">Oferecemos uma
+							variedade de aulas, incluindo yoga, musculação, crossfit e zumba.</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="card"
-					style="background: #DCDCDC; border: 1px solid black">
-					<img src="img/ComunidadeEngajada.png" class="card-img-top"
-						alt="Comunidade Engajada">
+					style="background: #262626; border: 1px solid black; border-radius: 20px;">
+					<img src="/img/ComunidadeEngajada.png" style="border-radius: 20px;"
+						class="card-img-top" alt="Comunidade Engajada">
 					<div class="card-body">
 						<h5 class="card-title" style="color: #007BFF">Comunidade
 							Engajada</h5>
-						<p class="card-text">Junte-se a uma comunidade que valoriza a
-							saúde, o bem-estar e o apoio mútuo.</p>
+						<p class="card-text" style="color: white">Junte-se a uma
+							comunidade que valoriza a saúde, o bem-estar e o apoio mútuo.</p>
 					</div>
 				</div>
 			</div>
@@ -76,5 +78,6 @@
 
 	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	<script type="module" src="/js/cursorNeon.js"></script>
 </body>
 </html>

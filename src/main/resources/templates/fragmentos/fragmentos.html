@@ -6,6 +6,7 @@
 <title>Login - Projeto Academia</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cursorNeon.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link
@@ -17,10 +18,9 @@
 <body>
 	<header th:fragment="cabecalho">
 		<nav class="navbar navbar-expand-lg navbar-dark"
-			style="color: white; background-color: #0000CD;">
-			<a class="navbar-brand" th:href="@{/}"> <img alt="Logo"
-				src="img/Logo_Strong.webp" width="130" height="90">
-			</a>
+			style="background-color: #1F1F1F;">
+			<a class="navbar-brand" th:href="@{/}" style="font-size: 40px;">
+				StrongPeople </a>
 			<button style="border: 2px solid white" class="navbar-toggler"
 				type="button" data-toggle="collapse" data-target="#navMobile">
 				<span class="navbar-toggler-icon"></span>
@@ -28,16 +28,19 @@
 			<div id="navMobile"
 				class="navbar-collapse collapse justify-content-end">
 
-				<a class="btn-nav nav-item nav-link" th:href="@{/}" style="color: white;" ><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-				<a class="btn-nav nav-item nav-link" th:href="@{/cadastrarAluno}" style="color: white;"><i class="fas fa-user-graduate" 
-				aria-hidden="true"></i> Cadastrar Aluno</a> 
-				<a class="btn-nav nav-item nav-link" th:href="@{/procurarAluno}" style="color: white;"><i class="fas fa-search"></i> Pesquisar Aluno</a> 
-				<a class="btn-nav nav-item nav-link btn-danger" style="color: white;"><i class="fas fa-times"></i> Sair</a>
+				<a class="btn-nav nav-item nav-link" th:href="@{/}"> <i
+					class="fa fa-home" aria-hidden="true"></i>Home
+				</a> <a class="btn-nav nav-item nav-link" th:href="@{/CadastrarAluno}"><i
+					class="fas fa-user-graduate" aria-hidden="true"></i> Cadastrar
+					Aluno</a> <a class="btn-nav nav-item nav-link" th:href="@{/listAlunos}"
+					><i class="fas fa-search"></i> Pesquisar
+					Aluno</a> <a class="btn-nav nav-item nav-link btn-danger"
+					><i class="fas fa-times"></i> Sair</a>
 
 			</div>
 		</nav>
 		<div class="aviso"
-			style="background: #FFC107; color: white; text-shadow: 1px 1px 0px black;">
+			style="background: #3D3D3D; color: white; text-shadow: 1px 1px 0px black;">
 			<span>Transforme-se hoje com a StrongPeople Academia!
 				Aproveite nossa promoção exclusiva e comece sua jornada de fitness
 				com 20% de desconto no primeiro mês. Não perca essa chance de
@@ -51,7 +54,6 @@
 			<span>Todos os diretos reservados - 2024 &copy; Peter Abenza</span>
 		</div>
 	</footer>
-
 
 	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
