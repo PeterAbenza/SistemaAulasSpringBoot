@@ -27,11 +27,11 @@ public class AlunoController {
 	public ModelAndView pesquisarAluno() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("listAluno/listAluno");
-		mv.addObject("alunosList", alunoRepositorio.findAll());// findAll() listar todos os dados;
+		mv.addObject("alunosList", alunoRepositorio.findAll());
 		return mv;
 	}
 	
-	@PostMapping("InsertAlunos") // cria um post
+	@PostMapping("InsertAlunos")
     public ModelAndView insertAluno(Aluno aluno) {
 		ModelAndView mv = new ModelAndView();	
 		mv.setViewName("redirect:/listAlunos");
